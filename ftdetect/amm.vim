@@ -1,0 +1,1 @@
+au BufRead,BufNewFile *.amm set filetype=amm
