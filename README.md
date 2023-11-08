@@ -33,4 +33,4 @@ This package provides syntax highlighting for Alan's `ln` source files, as well 
 
 ## License
 
-Apache 2.0
+MIT
