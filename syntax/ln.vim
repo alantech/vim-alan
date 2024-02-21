@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language:   Alan
-" Maintainer: Alan Technologies, Inc
+" Maintainer: Alan Language Contributors
 " URL: https://github.com/alantech/vim-alan
 
 if exists("b:current_syntax")
@@ -8,7 +8,7 @@ if exists("b:current_syntax")
 endif
 
 syntax keyword importKeywords import from export as
-syntax keyword normalKeywords type fn event on const let return emit prefix infix precedence if else new interface
+syntax keyword normalKeywords type fn event on const let return emit prefix infix precedence if else new interface binds
 syntax match   lnOperators   "[+\-/*^.~`!@#$%&|:;<?=][+\-/*^.~`!@#$%&|:;<>?=]*"
 syntax match   lnSymbols     "[,\{\}\(\)<>\[\]\.=@:]"
 syntax match   lnConstants   "true"
