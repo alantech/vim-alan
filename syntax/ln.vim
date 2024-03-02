@@ -13,7 +13,7 @@ syntax match   lnOperators   "[+\-/*^.~`!@#$%&|:;<?=][+\-/*^.~`!@#$%&|:;<>?=]*"
 syntax match   lnSymbols     "[,\{\}\(\)<>\[\]\.=@:]"
 syntax match   lnConstants   "true"
 syntax match   lnConstants   "false"
-syntax region  lnConstants   start=+\z(["']\)+ skip=+\\\%(\z1\|$\)+ end=+\z1+ end=+$+
+syntax region  lnConstants   start=+\z(["']\)+ skip=+\\\%(\z1\)+ end=+\z1+
 syntax match   lnConstants   /\c\<\%(\d\+\%(e[+-]\=\d\+\)\=\|0b[01]\+\|0o\o\+\|0x\x\+\)\>/
 syntax region  lnComment     start="//" end="$" contains=@Spell
 syntax region  lnComment     start="/\*" end="\*/" contains=@Spell fold
