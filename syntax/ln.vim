@@ -8,13 +8,13 @@ if exists("b:current_syntax")
 endif
 
 syntax keyword importKeywords import from export as
-syntax keyword normalKeywords type fn event on const let return emit prefix infix precedence if else new interface binds
-syntax match   lnOperators   "[+\-/*^.~`!@#$%&|:;<?=][+\-/*^.~`!@#$%&|:;<>?=]*"
-syntax match   lnSymbols     "[,\{\}\(\)<>\[\]\.=@:]"
+syntax keyword normalKeywords type ctype fn event on const let return emit prefix infix postfix precedence if else new interface
+syntax match   lnOperators   "[@+\-/*^.~`!@#$%&|:;<>?=][+\-/*^.~`!@#$%&|:;<>?=]*"
+syntax match   lnSymbols     "[,\{\}\(\)\[\]\.=:]"
 syntax match   lnConstants   "true"
 syntax match   lnConstants   "false"
 syntax region  lnConstants   start=+\z(["']\)+ skip=+\\\%(\z1\)+ end=+\z1+
-syntax match   lnConstants   /\c\<\%(\d\+\%(e[+-]\=\d\+\)\=\|0b[01]\+\|0o\o\+\|0x\x\+\)\>/
+syntax match   lnConstants   /\c\<\%(\(\d\|_\)\+\%(e[+-]\=\(\d\|_\)\+\)\=\|0b[01_]\+\|0o\(\o\|_\)\+\|0x\(\x\|_\)\+\)\>/
 syntax region  lnComment     start="//" end="$" contains=@Spell
 syntax region  lnComment     start="/\*" end="\*/" contains=@Spell fold
 
